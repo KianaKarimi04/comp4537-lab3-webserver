@@ -25,7 +25,7 @@ class Server {
             }
 
             // C.1 — writeFile
-            else if (parsedUrl.pathname === '/COMP4537/labs/3/writeFile') {
+            else if (parsedUrl.pathname.startsWith('/COMP4537/labs/3/writeFile')) {
                 const text = parsedUrl.query.text || '';
                 this.fileService.append(text);
 

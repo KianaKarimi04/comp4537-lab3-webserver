@@ -29,7 +29,7 @@ class Server {
             // C.1 — writeFile
             if (pathName.startsWith('/COMP4537/labs/3/writeFile')) {
                 const text = parsedUrl.query.text || '';
-                this.fileService.append(text);
+                this.fileService.appendText(text);
 
                 res.writeHead(200, { 'Content-Type': 'text/plain' });
                 res.end('Text appended successfully');

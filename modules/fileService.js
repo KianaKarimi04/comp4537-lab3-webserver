@@ -3,11 +3,17 @@ const path = require('path');
 
 class FileService {
     constructor() {
-        this.filePath = path.join(__dirname, '../data/file.txt');
+        this.dataDir = path.join(__dirname, '../data');
+        this.filePath = path.join(this.dataDir, 'file.txt');
+
+        // Ensure data directory exists
+        if (!fs.existsSync(this.dataDir)) {
+            fs.mkdirSync(this.dataDir, { recursive: true });
+        }
     }
 
     appendText(text) {
-        fs.appendFileSync(this.filePath, text + '\n');
+        fs.appendFileSync(this.filePath, text + '\n', { flag: 'a' });
     }
 
     readFile() {

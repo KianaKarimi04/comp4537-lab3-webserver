@@ -38,7 +38,7 @@ class Server {
 
             // C.2 — readFile
             if (pathName.startsWith('/COMP4537/labs/3/readFile')) {
-                const content = this.fileService.read();
+                const content = this.fileService.readFile();
 
                 if (content === null) {
                     res.writeHead(404, { 'Content-Type': 'text/plain' });

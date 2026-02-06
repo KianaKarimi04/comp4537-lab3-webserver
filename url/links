@@ -1,0 +1,5 @@
+part B url: https://comp4537-lab3-webserver.onrender.com/COMP4537/labs/3/getDate?name=Kiana
+
+part c.1 url: https://comp4537-lab3-webserver.onrender.com/COMP4537/labs/3/writeFile?text=BCIT
+
+part c.2 url: https://comp4537-lab3-webserver.onrender.com/COMP4537/labs/3/readFile/file.txt
